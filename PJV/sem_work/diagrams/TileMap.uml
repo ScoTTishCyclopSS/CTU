@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>TileMap</OriginalElement>
+  <nodes>
+    <node x="26.0" y="0.0">TileMap.Tile</node>
+    <node x="304.0" y="0.0">TileMap.BackgroundTile</node>
+    <node x="0.0" y="219.0">TileMap.TileMap</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="TileMap.TileMap" target="TileMap.Tile">
+      <point x="86.33333333333331" y="-397.0" />
+      <point x="215.83333333333331" y="194.0" />
+      <point x="198.5" y="194.0" />
+      <point x="69.0" y="84.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="86.5" y="248.5" />
+  <SelectedNodes>
+    <node>TileMap.Tile</node>
+    <node>TileMap.BackgroundTile</node>
+    <node>TileMap.TileMap</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
