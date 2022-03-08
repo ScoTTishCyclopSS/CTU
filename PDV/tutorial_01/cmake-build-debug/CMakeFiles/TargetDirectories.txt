@@ -1,0 +1,8 @@
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/false_sharing.bin.dir
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/hello.bin.dir
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/memory.bin.dir
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/magic.bin.dir
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/matrix.bin.dir
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/decrypt.bin.dir
+C:/Users/fedti/Desktop/PDV/tutorial_01/cmake-build-debug/CMakeFiles/edit_cache.dir
