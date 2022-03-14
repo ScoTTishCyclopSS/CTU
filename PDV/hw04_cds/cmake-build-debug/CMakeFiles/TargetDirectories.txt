@@ -1,0 +1,3 @@
+C:/Users/fedti/Downloads/hw04_cds/hw04_cds/cmake-build-debug/CMakeFiles/PDV_HW03.dir
+C:/Users/fedti/Downloads/hw04_cds/hw04_cds/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/fedti/Downloads/hw04_cds/hw04_cds/cmake-build-debug/CMakeFiles/rebuild_cache.dir
