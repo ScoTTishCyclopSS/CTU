@@ -1,32 +1,30 @@
 #include <functional>
 #include "bst_tree.h"
+#include <iostream>
 
 void bst_tree::insert(long long data) {
 
     node *n = new node(data);
-
-    if (root == nullptr) {
-        root = n;
-        if (root.compare_exchange_strong(n, root))return;
-    }
-
     node *curr = root;
     node *previous;
 
-    while(true) {
+    if (curr == nullptr)
+        if (root.compare_exchange_strong(curr, n))
+            return;
+
+    return;
+
+    while (true) {
         previous = curr;
 
-        if (data < previous->data)
-        {
+        if (data < previous->data) {
             curr = curr->left;
             if (curr == nullptr) {
                 previous->left = n;
                 if (previous->left.compare_exchange_strong(n, previous->left))
                     return;
             }
-        }
-        else
-        {
+        } else {
             curr = curr->right;
             if (curr == nullptr) {
                 previous->right = n;
@@ -35,7 +33,6 @@ void bst_tree::insert(long long data) {
             }
         }
     }
-
 }
 
 bst_tree::~bst_tree() {

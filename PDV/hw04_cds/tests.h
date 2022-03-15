@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <functional>
 #include <cstdlib>
+#include <iostream>
 
 #include "bst_tree.h"
 
@@ -30,12 +31,21 @@ public:
         // dodrzet poradi vkladani prvku do stromu. (Pokud bychom pouzili staticky scheduling, vlakna 
         // s vyssim indexem by zacinala se vkladanim prvku z prostredku pole, presneji na indexech
         // k*N/omp_get_num_threads()).
+
+        std::cout << "root must be: " << data[0] << '\n';
+
         #pragma omp parallel for schedule(dynamic)
-        for(int i = 0 ; i < static_cast<int>(N); i++) {
+        for(int i = 0 ; i < 5; i++) { // static_cast<int>(N)
             tree.insert(data[i]);
         }
+
+        std::cout << "root: " << get_root() << '\n';
     }
 
+    long long get_root() {
+        bst_tree::node *r = tree.root;
+        return r->data;
+    }
     // Kontrola spravnosti vysledku
     bool verify() {
         // Strom prochazime v poradi inorder a jeho prvky si vkladame do pole. Diky vlastnostem binarniho

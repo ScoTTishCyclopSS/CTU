@@ -39,8 +39,11 @@ void run_test(std::string test_name) {
 int main() {
     // Test vkladani do BST "napreskacku"
     run_test<shuffled_data<N1>>("Shuffled data");
+
     // Test vkladani do BST "poporade"
     run_test<sorted_data<N2>>  ("Sorted data  ");
+
+
 
     return 0;
 }

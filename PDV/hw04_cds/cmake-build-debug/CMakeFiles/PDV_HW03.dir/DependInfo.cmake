@@ -4,21 +4,12 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/fedti/Downloads/hw04_cds/hw04_cds/bst_tree.cpp" "C:/Users/fedti/Downloads/hw04_cds/hw04_cds/cmake-build-debug/CMakeFiles/PDV_HW03.dir/bst_tree.cpp.obj"
-  "C:/Users/fedti/Downloads/hw04_cds/hw04_cds/main.cpp" "C:/Users/fedti/Downloads/hw04_cds/hw04_cds/cmake-build-debug/CMakeFiles/PDV_HW03.dir/main.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/fedti/Documents/GitHub/PDV/hw04_cds/bst_tree.cpp" "CMakeFiles/PDV_HW03.dir/bst_tree.cpp.obj" "gcc" "CMakeFiles/PDV_HW03.dir/bst_tree.cpp.obj.d"
+  "C:/Users/fedti/Documents/GitHub/PDV/hw04_cds/main.cpp" "CMakeFiles/PDV_HW03.dir/main.cpp.obj" "gcc" "CMakeFiles/PDV_HW03.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.
