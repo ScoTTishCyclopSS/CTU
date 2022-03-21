@@ -32,14 +32,10 @@ public:
         // s vyssim indexem by zacinala se vkladanim prvku z prostredku pole, presneji na indexech
         // k*N/omp_get_num_threads()).
 
-        std::cout << "root must be: " << data[0] << '\n';
-
         #pragma omp parallel for schedule(dynamic)
-        for(int i = 0 ; i < 5; i++) { // static_cast<int>(N)
+        for(int i = 0 ; i < static_cast<int>(N); i++) { // static_cast<int>(N)
             tree.insert(data[i]);
         }
-
-        std::cout << "root: " << get_root() << '\n';
     }
 
     long long get_root() {

@@ -1,3 +1,0 @@
-﻿  shaders-data.cpp
-C:\Users\fedti\Desktop\PGR\shaders-data\shaders-data.cpp(182,2): warning C4065: switch statement contains 'default' but no 'case' labels
-  shaders-data.vcxproj -> C:\Users\fedti\Desktop\PGR\shaders-data\Debug\shaders-data.exe

@@ -4,33 +4,32 @@
 
 void bst_tree::insert(long long data) {
 
-    node *n = new node(data);
-    node *curr = root;
-    node *previous;
+    node *new_node = new node(data);
+    node *curr, *null_node = nullptr;
 
-    if (curr == nullptr)
-        if (root.compare_exchange_strong(curr, n))
+    if(root == nullptr)
+        if (root.compare_exchange_strong(null_node, new_node))
             return;
 
-    return;
+    curr = root;
 
     while (true) {
-        previous = curr;
 
-        if (data < previous->data) {
+        // left traverse
+        if (data < curr->data) {
+            if (curr->left == nullptr) {
+                node *null_node1 = nullptr;
+                if (curr->left.compare_exchange_strong(null_node1, new_node))
+                    return;
+            }
             curr = curr->left;
-            if (curr == nullptr) {
-                previous->left = n;
-                if (previous->left.compare_exchange_strong(n, previous->left))
+        } else if (data > curr->data){
+            if (curr->right == nullptr) {
+                node *null_node1 = nullptr;
+                if (curr->right.compare_exchange_strong(null_node1, new_node))
                     return;
             }
-        } else {
             curr = curr->right;
-            if (curr == nullptr) {
-                previous->right = n;
-                if (previous->right.compare_exchange_strong(n, previous->right))
-                    return;
-            }
         }
     }
 }
