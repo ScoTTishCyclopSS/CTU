@@ -1,5 +1,3 @@
-import numpy
-
 from blockworld import BlockWorld
 from queue import PriorityQueue
 
@@ -16,45 +14,84 @@ class BlockWorldHeuristic(BlockWorld):
 
 		score = 0
 
+		if self_state == goal_state:
+			return score
+
 		for pile_s in self_state:
 			for pile_g in goal_state:
 				c_s = len(pile_s) - 1  # local counters
 				c_g = len(pile_g) - 1  # first block = last element in the array
 
 				if pile_s[c_s] == pile_g[c_g]:  # if both piles start with the same block -> start count
-					blocks_in_pile = 0
+					# ----------------
+					same_blocks = 0
 					while (pile_s[c_s] == pile_g[c_g]) and (c_s >= 0) and (c_g >= 0):
-						blocks_in_pile += 1
+						same_blocks += 1
 						c_s -= 1
 						c_g -= 1
-					score += len(pile_s) - blocks_in_pile
-				else:
+					# ----------------
+					score += len(pile_s) - same_blocks
+				else:  # there is no point even to count smt
 					score += len(pile_s)
 
 		return score
 
 
 class AStar():
+
+	def reconstruct(self, start, goal, state_from):
+		steps = []
+		curr = goal
+
+		while not curr == start:
+			state_before, action = state_from[curr]
+			steps.append(action)
+			curr = state_before
+
+		list.reverse(steps)
+
+		return steps
+
 	def search(self, start, goal):
 
+		state_from = {}
+		actual_cost = {}
 		q = PriorityQueue()
-		q.put((0, start, []))  # put first state into the
+
+		# define start state: into the q & dict
+		q.put((0, start))
+		state_from[start] = (None, None)
+		actual_cost[start] = 0
 
 		while not q.empty():
-			priority, state, actions = q.get()
-			print("\ncurr: ", priority, state)
-			if state == goal:  # the path has been found
-				return actions
-			for action, neighbor in state.get_neighbors():  # else -> put into q with calculated heuristic
-				actions_clone = list.copy(actions)
-				actions_clone.append(action)
-				print("   -> ", (neighbor.heuristic(goal), neighbor))
-				q.put((state.heuristic(neighbor), neighbor, actions_clone))
+			priority, state = q.get()
+			# print(f"#{priority} {state}")
+
+			if state == goal:
+				return self.reconstruct(start, goal, state_from)
+
+			for action, neighbor in state.get_neighbors():
+
+				cost = actual_cost[state] + state.heuristic(neighbor)
+				# print(f"---> {cost}, {neighbor}")
+
+				if neighbor not in actual_cost or (cost < actual_cost[neighbor]):
+					actual_cost[neighbor] = cost
+					q.put((cost, neighbor))
+					state_from[neighbor] = (state, action)
+
+				if neighbor == goal:
+					return self.reconstruct(start, goal, state_from)
+
 		return None
+
+
+
+
 
 if __name__ == '__main__':
 	# Here you can test your algorithm. You can try different N values, e.g. 6, 7.
-	N = 3
+	N = 8
 
 	start = BlockWorldHeuristic(N)
 	goal = BlockWorldHeuristic(N)
