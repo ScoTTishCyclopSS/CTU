@@ -4,6 +4,7 @@
 #include <thread>
 #include <chrono>
 #include <numeric>
+#include <stdexcept>
 #include "generator.h"
 #include "../params.h"
 

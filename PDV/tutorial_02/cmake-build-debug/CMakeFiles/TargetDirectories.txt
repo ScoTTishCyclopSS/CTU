@@ -1,5 +1,0 @@
-C:/Users/fedti/Downloads/tutorial_02/tutorial_02/cmake-build-debug/CMakeFiles/benchmark.bin.dir
-C:/Users/fedti/Downloads/tutorial_02/tutorial_02/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/fedti/Downloads/tutorial_02/tutorial_02/cmake-build-debug/CMakeFiles/condition_variable.bin.dir
-C:/Users/fedti/Downloads/tutorial_02/tutorial_02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/fedti/Downloads/tutorial_02/tutorial_02/cmake-build-debug/CMakeFiles/decrypt.bin.dir

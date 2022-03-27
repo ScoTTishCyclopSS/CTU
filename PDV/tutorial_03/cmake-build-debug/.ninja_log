@@ -1,6 +1,0 @@
-# ninja log v5
-4	255	6680247258693087	CMakeFiles/test_openmp.bin.dir/test.cpp.obj	c525bafcaa575afa
-258	479	6680247260724371	test_openmp.bin.exe	ca39ea7d55a4b85d
-12	620	6680274409342443	CMakeFiles/main.bin.dir/integrate.cpp.obj	f56613092b00bfdb
-622	887	6680274411853079	main.bin.exe	65040d3445f2d9e7
-3	2390	6680252246129624	CMakeFiles/main.bin.dir/main.cpp.obj	5167fb0577408fdf

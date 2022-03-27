@@ -3,6 +3,7 @@
 #include <chrono>
 #include <omp.h>
 
+#include <stdlib.h>
 
 #include "_tests/tests.h"
 
@@ -33,7 +34,7 @@ void eval(std::string test_name) {
 }
 
 int main() {
-
+    //_putenv_s("OMP_CANCELLATION", "1");
     if (!omp_get_cancellation()) {
         std::cout << "-----------------------------------------------------------------------------" << std::endl;
         std::cout << "| WARNING: OpenMP cancellations are not enabled                             |" << std::endl;

@@ -11,7 +11,7 @@ else()
 	add_compile_options("-O3")
 endif()
 
-find_package(OpenMP 2.0 REQUIRED)
+find_package(OpenMP 4.0 REQUIRED) 
 
 add_executable(DatabaseQueries main.cpp query.h _generator/generator.cpp)
 
