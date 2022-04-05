@@ -1,0 +1,25 @@
+CAA ECA BEB EEA
+
+3rd letter:
+a:caa, eca, eea
+b:beb
+c:-
+d:-
+e:-
+-> caa, eca, eea, beb
+
+2nd letter:
+a:caa
+b:-
+c:eca
+d:-
+e:eea, beb
+-> caa, eca, eea, beb
+
+1st letter:
+a:-
+b:beb
+c:caa
+d:-
+e:eca, eea
+-> beb, caa, eca, eea

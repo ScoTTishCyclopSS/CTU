@@ -31,4 +31,7 @@ using MappingFunction = const unsigned long (*)(const char &character_of_alphabe
 void radix_par(std::vector<std::string *> &vector_to_sort, const MappingFunction &mappingFunction,
                unsigned long alphabet_size, unsigned long string_lengths);
 
+void radix_par_std(std::vector<std::string *> &vector_to_sort, const MappingFunction &mappingFunction,
+               unsigned long alphabet_size, unsigned long string_lengths, unsigned long r);
+
 #endif //CODE_SORT_H

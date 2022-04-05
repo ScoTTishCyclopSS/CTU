@@ -1,4 +1,3 @@
-#include <iostream>
 #include <random>
 #include <algorithm>
 #include <chrono>
@@ -10,7 +9,7 @@
 // nase prvky, ktere budeme radit, jsou retezce
 using element_t = std::string;
 // bude jich celkem tolik
-const int count_of_elements = 20;
+const int count_of_elements = 25000000;
 // vsechny stringy maji prave tuto delku. nemusite osetrovat zadne specialni pripady, ze by retezce byli jinak dlouhe.
 // toto vam usetri osetrovani specialnich pripadu
 const int max_length = 3;
@@ -97,7 +96,7 @@ eval(const std::string &test_name, SortingAlgorithm<element_t> sorting_algorithm
 
         // Kontrola spravnosti vysledku
         if (!sortingTest.verify(data_to_sort)) {
-            printf("%s       --- wrong result ---\n", test_name.c_str());
+            printf("%s       --- wrong result %7lldms---\n", test_name.c_str(), duration_cast<milliseconds>(end - begin).count());
         } else {
             printf("%s          %7lldms\n", test_name.c_str(), duration_cast<milliseconds>(end - begin).count());
         }
@@ -122,7 +121,7 @@ int main() {
 
     // razeni za pouziti std::sort. na vygenerovane datove sade by mel byt znatelne pomalejsi nez vase reseni. radek
     // pro urychleni testovani muzete zakomentovat
-    //eval<element_t>("std::sort", std_sort<element_t>, data_to_sort);
+    eval<element_t>("std::sort", std_sort<element_t>, data_to_sort);
 
     return 0;
 }
