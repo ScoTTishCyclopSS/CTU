@@ -1,0 +1,19 @@
+# ninja log v5
+5	951	6900597189057829	CMakeFiles/hw3.dir/main.cpp.obj	906f29673a88a8a3
+952	1117	6900597190620271	hw3.exe	795f7c952d2b0b49
+1	1821	6900598058171504	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+1823	2163	6900598061613347	hw3_jogo.exe	bb0bf80496ddf77b
+9	973	6900603724160973	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+974	1133	6900603725726740	hw3_jogo.exe	bb0bf80496ddf77b
+6	930	6900605297598412	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+931	1087	6900605299006931	hw3_jogo.exe	bb0bf80496ddf77b
+5	878	6900609411331417	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+879	1015	6900609412589816	hw3_jogo.exe	bb0bf80496ddf77b
+4	903	6900611476512871	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+904	1042	6900611477919322	hw3_jogo.exe	bb0bf80496ddf77b
+4	857	6900614602200128	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+858	1007	6900614603627481	hw3_jogo.exe	bb0bf80496ddf77b
+6	809	6900614711318514	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+810	938	6900614712573429	hw3_jogo.exe	bb0bf80496ddf77b
+5	798	6900614807301279	CMakeFiles/hw3_jogo.dir/main_jogobeny.cpp.obj	a5c3710afc0996f7
+799	929	6900614808555494	hw3_jogo.exe	bb0bf80496ddf77b
