@@ -1,3 +1,0 @@
-C:/Users/fedti/Documents/GitHub/PDV/hw06_sort/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/fedti/Documents/GitHub/PDV/hw06_sort/cmake-build-debug/CMakeFiles/hw.dir
-C:/Users/fedti/Documents/GitHub/PDV/hw06_sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir

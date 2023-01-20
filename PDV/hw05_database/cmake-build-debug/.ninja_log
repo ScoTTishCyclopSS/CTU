@@ -1,7 +1,0 @@
-# ninja log v5
-31	1478	6699328766631582	CMakeFiles/DatabaseQueries.dir/main.cpp.obj	af856c550d6ba01
-12	2003	6699328771891847	CMakeFiles/DatabaseQueries.dir/_generator/generator.cpp.obj	60f0fa6f0e1bef36
-2003	2263	6699328774361600	DatabaseQueries.exe	43fe13748de777d0
-27	1447	6701224746894856	CMakeFiles/DatabaseQueries.dir/main.cpp.obj	51ce8bfdc33f4f50
-9	1958	6701224752051143	CMakeFiles/DatabaseQueries.dir/_generator/generator.cpp.obj	439cbb85edd4d2f6
-1958	2151	6701224753926213	DatabaseQueries.exe	43fe13748de777d0

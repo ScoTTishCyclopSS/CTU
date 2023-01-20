@@ -1,3 +1,0 @@
-C:/Users/fedti/Documents/GitHub/PDV/hw05_database/cmake-build-release/CMakeFiles/edit_cache.dir
-C:/Users/fedti/Documents/GitHub/PDV/hw05_database/cmake-build-release/CMakeFiles/DatabaseQueries.dir
-C:/Users/fedti/Documents/GitHub/PDV/hw05_database/cmake-build-release/CMakeFiles/rebuild_cache.dir
