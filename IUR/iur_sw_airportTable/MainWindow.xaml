@@ -1,0 +1,25 @@
+﻿<Window x:Class="iur_sw_airportTable.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iur_sw_airportTable"
+        xmlns:v="clr-namespace:iur_sw_airportTable.View"
+        xmlns:vm="clr-namespace:iur_sw_airportTable.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="615" Width="1015" ResizeMode="NoResize">
+
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+
+    <Grid Style="{StaticResource mainWindow}">
+
+        <ContentControl Content="{Binding CurrentViewModel}"/>
+
+        <Grid>
+            <ContentControl Content="{Binding CurrentModalViewModel}"/>
+        </Grid>
+
+    </Grid>
+</Window> 

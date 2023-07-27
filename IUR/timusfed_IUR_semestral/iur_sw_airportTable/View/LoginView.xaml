@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="iur_sw_airportTable.View.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:iur_sw_airportTable.View"
+             xmlns:vm="clr-namespace:iur_sw_airportTable.ViewModel"
+             xmlns:converters="clr-namespace:iur_sw_airportTable.Converter"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converters:LogInConverter x:Key="LogInConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Style="{StaticResource logInForm}">
+        <Border>
+            <Grid>
+                <Label Style="{StaticResource mySmallLabel}" FontSize="14" Content="Login" Foreground="Black" Margin="0,45,125,0"/>
+                <Label Style="{StaticResource mySmallLabel}" FontSize="14" Content="Password" Foreground="Black" Margin="0,80,125,0" />
+                <TextBox Name="LoginBox" Text="timusfed" Margin="0,-80,10,0"/>
+                <PasswordBox Name="PasswordBox" Margin="0,-10,10,0"/>
+                <Button Command="{Binding CloseModalCommand}" Content="⨉" Style="{StaticResource closeModalBtn}"/>
+                <Button Command="{Binding LogInCommand}" Content="Log In">
+                    <Button.CommandParameter>
+                        <MultiBinding Converter="{StaticResource LogInConverter}">
+                            <Binding ElementName="LoginBox" Path="Text"/>
+                            <Binding ElementName="PasswordBox"/>
+                        </MultiBinding>
+                    </Button.CommandParameter>
+                </Button>
+                <Label Content="{Binding ErrMsg}" Style="{StaticResource mySmallLabel}" FontSize="12" Foreground="Red" Margin="0,122,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+    </Grid>
+
+</UserControl>

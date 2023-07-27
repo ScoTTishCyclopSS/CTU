@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="iur_sw_airportTable.View.LoadingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:iur_sw_airportTable.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Style="{StaticResource logInForm}">
+        <Image Source="/_Resources/loadIcon.png" RenderOptions.BitmapScalingMode="HighQuality" Width="100" Height="100" Opacity="0.9">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="rotateThis" Angle="0" CenterX="50" CenterY="50"/>
+            </Image.RenderTransform>
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="rotateThis" Storyboard.TargetProperty="Angle" By="360" Duration="0:0:10"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+    </Grid>
+</UserControl>
